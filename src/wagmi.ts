@@ -6,8 +6,10 @@ export const config = createConfig({
   chains: [mainnet, sepolia],
   connectors: [
     injected(),
-    // coinbaseWallet({ appName: "Create Wagmi" }),
-    walletConnect({ projectId: "eba60840aab77b39da54d500c218d107" }),
+    coinbaseWallet({ appName: "Create Wagmi" }),
+    walletConnect({
+      projectId: process.env.NEXT_PUBLIC_WC_PROJECT_ID as string,
+    }),
   ],
   ssr: true,
   transports: {
