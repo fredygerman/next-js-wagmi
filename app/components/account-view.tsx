@@ -35,6 +35,7 @@ export default function AccountView() {
             key={connector.uid}
             onClick={() => connect({ connector })}
             type="button"
+            className="mr-2"
           >
             {connector.name}
           </button>
