@@ -3,7 +3,7 @@
 import React from "react";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 
-export default function New() {
+export default function AccountView() {
   const account = useAccount();
   const { connectors, connect, status, error } = useConnect();
   const { disconnect } = useDisconnect();
